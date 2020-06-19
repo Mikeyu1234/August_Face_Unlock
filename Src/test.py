@@ -10,10 +10,10 @@ camera.resolution =(1024,768)
 camera.framerate = 30
 
 rawCapture = PiRGBArray(camera, camera.resolution)
-face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
+face_cascade = cv2.CascadeClassifier('../Models/haarcascade_frontalface_default.xml')
 
 name = input('What is her name?')
-dirName = './images/'+name
+dirName = '../images/'+name
 if not os.path.exists(dirName):
     os.makedirs(dirName)
     print('Dir Created')
